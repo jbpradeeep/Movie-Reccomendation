@@ -20,7 +20,7 @@ movies = pickle.load(open('movies.pkl','rb'))
 
 loaded_model = pickle.load(open('trained_pkl_movie_model.pkl','rb'))
 
-# list of all movie sin the package
+# list of all movies in the package
 
 list_of_movies = movies['title'].tolist()
 
@@ -59,13 +59,13 @@ def main():
     
     # giving a title 
     
-    st.title = ('Movie Recommandation Syatem')
+    st.title ('Movie Recommandation Syatem')
     
     # getting the movie name from the user
     
-    option = st.selectbox('Hoe wuld you like to be contactes',list_of_movies)
+    option = st.selectbox('Select The Movie',list_of_movies)
     
-    # Creating a butto n for selection
+    # Creating a button for selection
     
     if st.button('Recommend'):
         recommend =suggestion(option)
